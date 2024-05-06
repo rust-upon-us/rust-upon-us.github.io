@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <style>
+        /*Common window*/
+        @media (min-width: 770px) and (orientation: landscape){
+            body{
+                margin: 0px;
+                background-color: #CFEFA9;
+            }
+            #Header{
+                display: table;
+                width: calc(100vw - 4px);
+                height: calc(10vh - 4px);
+                border: black 2px solid;
+                position: absolute;
+                background-color: #A1B788;
+                top: 0;
+                left: 0;
+            }
+            .Link{
+                display: table-cell;
+                width: calc(25vw - 4px);
+                border-style: solid;
+                border-width: 2px 0 2px 0;
+                border-color: black;
+                text-decoration: none;
+            }
+            #Content{
+                position: relative;
+                width: calc(100vw - 4px);
+                height: calc(80vh - 4px);
+                top: 10vh;
+                overflow: scroll;
+                scrollbar-width: none;
+            }
+            #Focus{
+                position: absolute;
+                display: block;
+                top: 5vh;
+                left: 5vw;
+                width: 40vw;
+            }
+            .Display-Image{
+                border: black 2px solid;
+                width: calc(100% - 4px);
+                height: auto;
+            }
+            .Display-Title{
+                position: relative;
+                top: -5px;
+                background-color: darkgrey;
+                border: black 2px solid;
+                width: calc(100% - 4px);
+            }
+            .Display-Info{
+                position: relative;
+                display: block;
+                top: -306px;
+                right: -382px;
+                background-color: darkgrey;
+                width: 10vw;
+                height: 285px;
+            }
+            #List{
+                position: absolute;
+                width: 30vw;
+                right: 50px;
+            }
+            .List-Image {
+                border: black 2px solid;
+                width: calc(100% - 4px);
+                height: auto;
+            }
+            .List-Title{
+                position: relative;
+                top: -5px;
+                background-color: darkgrey;
+                border: black 2px solid;
+                width: calc(100% - 4px);
+                margin: 0 0 10px;
+            }
+            #Footer{
+                display: table;
+                width: calc(100vw - 4px);
+                height: calc(10vh + 4px);
+                border: black 2px solid;
+                background-color: gray;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            .Column-3{
+                display: table-cell;
+                width: 33vw;
+            }
+        }
+        /*Mobile device "Portrait Mode"*/
+        @media screen and (orientation: portrait){
+            body{
+                margin: 0;
+                padding: 0;
+                overflow: scroll;
+                scrollbar-width: none;
+            }
+            #Header{
+                width: calc(100vw - 4px);
+                border: black 2px solid;
+                height: 10vh;
+                background-color: darkgrey;
+            }
+            #Content{
+                width: 100vw;
+            }
+            #Footer{
+                width: calc(100vw - 4px);
+                border: black 2px solid;
+                display: table;
+                background-color: darkgrey;
+            }
+            /* Header's elements */
+            .Link{
+                display: table-cell;
+                padding: 1.5em 0 0 1.5em;
+                width: 20vw;
+            }
+            /* Body's elements "Main Display" */
+            #Focus{
+                display: block;
+                width: calc(100vw - 4px);
+            }
+            .Display-Image{
+                width: calc(100vw - 4px);
+                border: black 2px solid;
+                height: auto;
+            }
+            .Display-Title{
+                position: relative;
+                width: calc(100vw - 4px);
+                border: black 2px solid;
+                border-radius: 0 0 10px 10px;
+                background-color: darkgrey;
+                text-align: center;
+                z-index: 20;
+                top: -6px;
+            }
+            .Display-Info{
+                position: relative;
+                width: calc(100vw - 4px);
+                border: black 2px solid;
+                background-color: lightgrey;
+                text-align: center;
+                padding: 1em 0 1em 0;
+                z-index: 10;
+                top: -15px;
+            }
+            /* Body's elements "AUX Items" */
+            #List{
+                display: block;
+                width: 100vw;
+            }
+            .Display-List{
+                width: calc(50vw - 3.15em);
+                display: inline-block;
+                position: relative;
+                padding: 1em 1.5em 0 1.5em;
+            }
+            .List-Image{
+                width: calc(100% - 4px);
+                border: black 2px solid;
+                height: auto;
+            }
+            .List-Title{
+                width: Calc(100% - 4px - 2em);
+                background-color: darkgrey;
+                border: black 2px solid;
+                position: relative;
+                padding: 1em;
+                top: -1.5em;
+                text-align: center;
+            }
+            /* Footer's elements */
+            .Column-3{
+                width: 30vw;
+                display: table-cell;
+            }
+        }
+        /*Mobile device "Landscape Mode"*/
+        @media screen and (orientation: landscape){
+            
+        }
+    </style>
+</head>
+<body>
+    <header id="Header">
+            <div class="Link">
+                <a>Page 1</a>
+            </div>
+            <div class="Link">
+                <a>Page 2</a>
+            </div>
+            <div class="Link">
+                <a>Page 3</a>
+            </div>
+            <div class="Link">
+                <a>Page 4</a>
+            </div>
+            <div class="Link">
+                <a>Page 5</a>
+            </div>
+    </header>
+    <main id="Content">
+        <div id="Focus">
+            <img class="Display-Image" src="src/Background.jpg">
+            <div class="Display-Title">
+                <h3>Naturaleza</h3>
+            </div>
+            <div class="Display-Info">
+                <p>Naturaleza en estado puro</p>
+            </div>
+        </div>
+        <div id="List">
+            <div class="Display-List">
+                <img class="List-Image" src="src/Background.jpg">
+                <p class="List-Title">Naturaleza</p>
+            </div>
+            <div class="Display-List">
+                <img class="List-Image" src="src/Background.jpg">
+                <p class="List-Title">Naturaleza</p>
+            </div>
+            <div class="Display-List">
+                <img class="List-Image" src="src/Background.jpg">
+                <p class="List-Title">Naturaleza</p>
+            </div>
+            <div class="Display-List">
+                <img class="List-Image" src="src/Background.jpg">
+                <p class="List-Title">Naturaleza</p>
+            </div>
+        </div>
+    </main>
+    <footer id="Footer">
+        <div class="Column-3">
+            <h5>Nosotros</h5>
+            <a>Contacto</a>
+            <a>Localizacion</a>
+        </div>
+        <div class="Column-3">
+            <h5>Normativa</h5>
+            <a>Uso de datos</a>
+            <a>Seguridad</a>
+        </div>
+        <div class="Column-3">
+            <h5>Quejas y sugerencias</h5>
+            <a>Contacto</a>
+            <a>Normas</a>
+        </div>
+    </footer>
+</body>
+</html>
